@@ -1,5 +1,20 @@
-﻿//Домашная работа 4
-// задачи находяться в ветках
-//1. first
-//2. second
-//3. third
+﻿//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+//452 -> 11
+//82 -> 10
+//9012 -> 12
+
+Console.WriteLine("Введите число");
+int i = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+int summa = 0;
+while (i > 0)
+{
+    int number = i % 10;
+    i = i / 10;
+    summa = summa + number;
+    if (i < 1) {
+        i = 0;
+    }
+}
+Console.WriteLine("Сумма всех цифр числа: " + summa);
+
+    
